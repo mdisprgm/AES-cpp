@@ -3,6 +3,7 @@
 
 #include <stdio.h>
 
+#include <string>
 #include <cstring>
 #include <iostream>
 #include <vector>
@@ -10,9 +11,10 @@
 enum class AESKeyLength { AES_128, AES_192, AES_256 };
 
 class AES {
- private:
+public:
   static constexpr unsigned int Nb = 4;
   static constexpr unsigned int blockBytesLen = 4 * Nb * sizeof(unsigned char);
+private:
 
   unsigned int Nk;
   unsigned int Nr;
